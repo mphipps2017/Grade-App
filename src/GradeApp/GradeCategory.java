@@ -1,10 +1,15 @@
 package GradeApp;
 
 import java.util.ArrayList;
-
+/**
+ * 
+ * @author Matthew Phipps
+ *
+ */
 public class GradeCategory {
 	ArrayList<Assignment> assignments;
-	double weight;
+	private double weight;
+	private String name;
 
 	/**
 	 * Constructor for a grade category
@@ -13,9 +18,10 @@ public class GradeCategory {
 	 *            the percentage of final grade this grade category is, must be 0 <
 	 *            weight < 1
 	 */
-	public GradeCategory(double weight) {
+	public GradeCategory(double weight, String name) {
 		assignments = new ArrayList<Assignment>();
 		this.weight = weight;
+		this.name = name;
 	}
 
 	/**
@@ -88,5 +94,23 @@ public class GradeCategory {
 			returner += assignments.get(i).toString();
 		}
 		return returner + "]";
+	}
+
+	/**
+	 * Get the name of this grade category
+	 * 
+	 * @return the name of this grade category
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * Method to get the list of assignments
+	 * 
+	 * @return The list of assignments in this grade category
+	 */
+	public ArrayList<Assignment> getAssignments() {
+		return assignments;
 	}
 }

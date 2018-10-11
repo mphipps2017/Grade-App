@@ -1,16 +1,21 @@
 package GradeApp;
 
 import java.util.ArrayList;
-
+/**
+ * 
+ * @author Matthew Phipps
+ *
+ */
 public class Class {
-	ArrayList<GradeCategory> gCats;
+	private ArrayList<GradeCategory> gCats;
+	private String name;
 
 	/**
 	 * Constructs a new class object.
 	 */
-	public Class() {
+	public Class(String name) {
 		gCats = new ArrayList<GradeCategory>();
-
+		this.name = name;
 	}
 
 	/**
@@ -58,5 +63,18 @@ public class Class {
 		}
 		return Math.floor((percentage + .0005) * 1000) / 10;
 		// return percentage;
+	}
+
+	/**
+	 * Get the name of this class
+	 * 
+	 * @return
+	 */
+	public String getName() {
+		return name;
+	}
+	
+	public ArrayList<GradeCategory> getGradeCategories(){
+		return gCats;
 	}
 }

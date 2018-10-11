@@ -1,5 +1,9 @@
 package GradeApp;
-
+/**
+ * 
+ * @author Matthew Phipps
+ *
+ */
 public class Assignment {
 	private double total;
 	private double score;
