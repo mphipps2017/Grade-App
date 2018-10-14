@@ -41,7 +41,7 @@ public class PostOperation {
 		FileWriter writer =  null;
 		try {
 			file.createNewFile();
-			writer = new FileWriter(file);
+			writer = new FileWriter(file, false);
 			writer.write(output);
 			writer.flush();
 			writer.close();

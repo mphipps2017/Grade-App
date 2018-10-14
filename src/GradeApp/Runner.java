@@ -11,7 +11,7 @@ public class Runner {
 		test.addAssignment(new Assignment(9,10));
 		math.addGradeCategory(gc);
 		math.addGradeCategory(test);
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 1; i++) {
 			gc.addAssignment(new Assignment(50, 100));
 		}
 		PostOperation.saveInfo(math);
